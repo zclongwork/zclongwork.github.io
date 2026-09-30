@@ -1,1 +1,6 @@
-theme: jekyll-theme-minimal
+title: 每日待办
+description: 今天要做什么，抬眼就知道。轻量、本地优先的 Android 每日待办应用。
+lang: zh-CN
+url: https://zclongwork.github.io
+exclude:
+  - README.md

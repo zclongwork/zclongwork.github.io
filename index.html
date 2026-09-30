@@ -1,28 +1,401 @@
-<!DOCTYPE html>
-<html lang="en">
-<!--该元素包含整个页面的内容，也称作根元素。-->
+<!doctype html>
+<html lang="zh-CN">
 <head>
-    <!--    该元素的内容对用户不可见，其中包含例如面向搜索引擎的搜索关键字（keywords）、页面描述、CSS 样式表和字符编码声明等。-->
-    <meta charset="UTF-8">
-    <title>zclongwork</title>
-<!--    该元素设置页面的标题，显示在浏览器标签页上，也作为收藏网页的描述文字。-->
-<!--  引用样式  -->
-    <link href="styles/style.css" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f6fc">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="每日待办是一款轻量的 Android 待办应用。无需账号，不申请网络权限，在桌面小部件上即可查看和完成今天的事项。">
+  <meta name="keywords" content="每日待办, Android 待办, 桌面小部件, 本地待办, 番茄钟, 隐私">
+  <meta name="author" content="zclongwork">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:title" content="每日待办｜今天要做什么，抬眼就知道">
+  <meta property="og:description" content="无需账号，不申请网络权限。直接在 Android 桌面查看和完成今天的事项。">
+  <meta property="og:url" content="https://zclongwork.github.io/">
+  <meta name="twitter:card" content="summary">
+  <title>每日待办｜今天要做什么，抬眼就知道</title>
+  <link rel="canonical" href="https://zclongwork.github.io/">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "每日待办",
+    "applicationCategory": "ProductivityApplication",
+    "operatingSystem": "Android 6.0 or later",
+    "description": "一款无需账号、不申请网络权限的轻量 Android 每日待办应用。",
+    "url": "https://zclongwork.github.io/"
+  }
+  </script>
 </head>
-
 <body>
+  <a class="skip-link" href="#main-content">跳到主要内容</a>
 
-    <h1>张的主页</h1>
+  <header class="site-header" data-header>
+    <div class="container nav-wrap">
+      <a class="brand" href="#top" aria-label="每日待办首页">
+        <span class="brand-mark" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </span>
+        <span>每日待办</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+        <span class="sr-only">打开导航菜单</span>
+        <span></span><span></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="主要导航" data-nav>
+        <a href="#features">功能</a>
+        <a href="#day">一天</a>
+        <a href="#privacy">隐私</a>
+        <a href="#faq">常见问题</a>
+        <a class="nav-github" href="#faq">
+          发布说明
+          <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4.5 3.5h8v8m0-8-9 9"/></svg>
+        </a>
+      </nav>
+    </div>
+  </header>
 
-    <p>主页建设中...</p>
-    <ul>
-        <li>Work</li>
-        <li>Life</li>
-        <li>Play</li>
-    </ul>
-    <p> Nice day… </p>
+  <main id="main-content">
+    <section class="hero" id="top">
+      <div class="hero-glow hero-glow-one" aria-hidden="true"></div>
+      <div class="hero-glow hero-glow-two" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow"><span></span>为 Android 认真做好今天</div>
+          <h1>今天要做什么，<br><em>抬眼就知道。</em></h1>
+          <p class="hero-lead">一款轻量的每日待办应用。无需账号，不申请网络权限；在桌面小部件上就能查看、完成今天的事项。</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#faq">
+              <span aria-hidden="true">↓</span>
+              首个版本准备中
+            </a>
+            <a class="button button-ghost" href="#widget-demo">体验桌面小部件</a>
+          </div>
+          <ul class="trust-list" aria-label="产品特点">
+            <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5 10 3 3 7-7"/></svg>Android 6.0+</li>
+            <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5 10 3 3 7-7"/></svg>数据保存在本机</li>
+            <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5 10 3 3 7-7"/></svg>无需注册账号</li>
+          </ul>
+        </div>
 
+        <div class="hero-product" id="widget-demo" aria-label="桌面小部件交互演示">
+          <div class="orbit orbit-one" aria-hidden="true"></div>
+          <div class="orbit orbit-two" aria-hidden="true"></div>
+          <div class="phone phone-home">
+            <div class="phone-screen home-screen">
+              <div class="status-bar"><span>10:35</span><span class="status-icons" aria-hidden="true">● ◒ ▰</span></div>
+              <div class="home-date"><span>9月30日</span><strong>星期三</strong></div>
+              <div class="home-weather" aria-hidden="true">24°</div>
+              <div class="android-widget">
+                <div class="widget-heading">
+                  <strong>今日待办</strong>
+                  <span>9月30日 周三</span>
+                </div>
+                <div class="widget-progress-label" data-progress-label>已完成 1 / 3</div>
+                <div class="widget-progress"><span data-progress-bar></span></div>
+                <button class="widget-row is-done" type="button" aria-pressed="true" disabled>
+                  <span class="widget-check">✓</span>
+                  <span>晨间拉伸</span>
+                </button>
+                <button class="widget-row widget-row-demo" type="button" aria-pressed="false" data-widget-task>
+                  <span class="widget-check"></span>
+                  <span data-task-text>完成官网初稿</span>
+                  <small data-undo-text></small>
+                </button>
+                <button class="widget-row" type="button" aria-pressed="false" disabled>
+                  <span class="widget-check"></span>
+                  <span>晚饭后散步</span>
+                </button>
+                <div class="widget-hint" data-widget-hint>点一下，直接完成</div>
+              </div>
+              <div class="home-apps" aria-hidden="true">
+                <span class="app-dot app-blue"></span><span class="app-dot app-pink"></span><span class="app-dot app-yellow"></span><span class="app-dot app-green"></span>
+              </div>
+              <div class="gesture-bar" aria-hidden="true"></div>
+            </div>
+          </div>
+          <div class="float-card float-focus" aria-hidden="true">
+            <span class="float-icon timer-icon">25</span>
+            <span><strong>专注进行中</strong><small>剩余 18:42</small></span>
+          </div>
+          <div class="float-card float-private" aria-hidden="true">
+            <span class="float-icon lock-icon"><svg viewBox="0 0 20 20"><rect x="4" y="8" width="12" height="9" rx="3"/><path d="M7 8V6a3 3 0 0 1 6 0v2"/></svg></span>
+            <span><strong>只在你的设备</strong><small>不申请网络权限</small></span>
+          </div>
+        </div>
+      </div>
+      <div class="container hero-footnote"><span>轻一点，反而更容易坚持。</span><a href="#features">看看它如何工作 <span aria-hidden="true">↓</span></a></div>
+    </section>
 
-<script src="scripts/index.js" defer></script>
+    <section class="section value-section" id="features">
+      <div class="container">
+        <div class="section-heading center-heading reveal">
+          <div class="eyebrow"><span></span>少一点操作，多一点完成</div>
+          <h2>不是管理所有事，<br>是先把<em>今天</em>做好。</h2>
+          <p>没有复杂项目和层层分类。打开应用，你只需要看见今天、选择一件事，然后开始。</p>
+        </div>
+        <div class="value-grid">
+          <article class="value-card value-card-widget reveal">
+            <div class="card-number">01</div>
+            <div class="mini-widget" aria-hidden="true">
+              <div><strong>今日待办</strong><small>2 / 4</small></div>
+              <span class="mini-progress"><i></i></span>
+              <p>☐ 回复邮件</p><p>☑ 整理桌面</p>
+            </div>
+            <div class="value-copy">
+              <span class="feature-tag">桌面小部件</span>
+              <h3>不打开 App，<br>也能完成今天。</h3>
+              <p>事项和进度直接留在桌面。轻点即可完成，再点一次还能撤销。</p>
+            </div>
+          </article>
+          <article class="value-card value-card-repeat reveal">
+            <div class="card-number">02</div>
+            <div class="repeat-visual" aria-hidden="true">
+              <div class="repeat-top"><span>重复</span><strong>自定义星期</strong></div>
+              <div class="week-pills"><i>一</i><i class="active">二</i><i>三</i><i class="active">四</i><i>五</i><i class="active">六</i><i>日</i></div>
+              <div class="repeat-result"><span class="repeat-arrow">↻</span><span><strong>练习 30 分钟</strong><small>每周：周二、周四、周六</small></span></div>
+            </div>
+            <div class="value-copy">
+              <span class="feature-tag">重复任务</span>
+              <h3>该出现的事情，<br>今天自然出现。</h3>
+              <p>每天、工作日、每周或自定义星期。每一天都有独立的完成状态。</p>
+            </div>
+          </article>
+          <article class="value-card value-card-local reveal">
+            <div class="card-number">03</div>
+            <div class="local-visual" aria-hidden="true">
+              <div class="local-phone"><span class="local-check">✓</span><i></i><i></i><i></i></div>
+              <div class="local-ring ring-a"></div><div class="local-ring ring-b"></div>
+              <span class="no-cloud"><s>☁</s><strong>无需云端</strong></span>
+            </div>
+            <div class="value-copy">
+              <span class="feature-tag">本地优先</span>
+              <h3>你的清单，<br>不经过我们的服务器。</h3>
+              <p>无需账号，也不申请网络权限。数据默认保存在应用私有空间。</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section day-section" id="day">
+      <div class="container day-grid">
+        <div class="day-copy reveal">
+          <div class="eyebrow eyebrow-light"><span></span>一天，刚刚好</div>
+          <h2>从看见今天，<br>到完成今天。</h2>
+          <p>每日待办围绕真实的一天设计。没有需要维护的复杂系统，每一步都只是为了帮你继续向前。</p>
+          <ol class="day-steps" data-day-steps>
+            <li class="is-active" data-step="0"><button type="button"><span>早晨</span><strong>今天的重复事项已经准备好</strong></button></li>
+            <li data-step="1"><button type="button"><span>白天</span><strong>在桌面随手勾掉一件事</strong></button></li>
+            <li data-step="2"><button type="button"><span>投入</span><strong>为重要事项开启 25 分钟</strong></button></li>
+            <li data-step="3"><button type="button"><span>回看</span><strong>从月历看见走过的每一天</strong></button></li>
+          </ol>
+        </div>
+        <div class="app-stage reveal" data-app-stage>
+          <div class="stage-halo" aria-hidden="true"></div>
+          <div class="phone phone-app">
+            <div class="phone-screen app-screen">
+              <div class="status-bar"><span>08:20</span><span class="status-icons" aria-hidden="true">● ◒ ▰</span></div>
+              <div class="app-panel is-active" data-panel="0">
+                <div class="app-title"><span><strong>今日待办</strong><small>9月30日 · 星期三</small></span><b>•••</b></div>
+                <div class="app-progress"><span></span></div>
+                <div class="app-progress-row"><strong>已完成 1 / 4</strong><button aria-label="添加待办" tabindex="-1">＋</button></div>
+                <div class="todo-card done"><i>✓</i><span><s>喝一杯水</s><small>↻ 每天</small></span></div>
+                <div class="todo-card"><i></i><span><b>整理今日计划</b><small>↻ 工作日</small></span><em>◷</em></div>
+                <div class="todo-card"><i></i><span><b>完成官网初稿</b></span><em>◷</em></div>
+                <div class="todo-card"><i></i><span><b>晚饭后散步</b><small>↻ 每周三</small></span><em>◷</em></div>
+              </div>
+              <div class="app-panel" data-panel="1">
+                <div class="app-title"><span><strong>今日待办</strong><small>9月30日 · 星期三</small></span><b>•••</b></div>
+                <div class="app-progress progress-half"><span></span></div>
+                <div class="app-progress-row"><strong>已完成 2 / 4</strong><button aria-label="添加待办" tabindex="-1">＋</button></div>
+                <div class="todo-card done"><i>✓</i><span><s>喝一杯水</s><small>↻ 每天</small></span></div>
+                <div class="todo-card done"><i>✓</i><span><s>整理今日计划</s><small>↻ 工作日</small></span></div>
+                <div class="todo-card"><i></i><span><b>完成官网初稿</b></span><em>◷</em></div>
+                <div class="sync-toast">✓ 桌面与应用进度已更新</div>
+              </div>
+              <div class="app-panel focus-panel" data-panel="2">
+                <div class="app-title"><span><strong>今日待办</strong><small>9月30日 · 星期三</small></span><b>•••</b></div>
+                <div class="focus-card-large">
+                  <div><span><small>专注</small><strong>完成官网初稿</strong></span><b>18:42</b></div>
+                  <div class="focus-line"><i></i></div>
+                  <div><small>专注进行中</small><span><button tabindex="-1">暂停</button><button class="danger" tabindex="-1">结束</button></span></div>
+                </div>
+                <div class="focus-quote">一次只做一件事。<br><strong>剩下的，25 分钟后再说。</strong></div>
+              </div>
+              <div class="app-panel history-panel" data-panel="3">
+                <div class="history-title"><span>‹</span><strong>完成记录</strong><span>今天</span></div>
+                <div class="month-row"><span>‹</span><strong>2026年9月</strong><span>›</span></div>
+                <p class="month-summary">本月完成 42 / 51 · 82%</p>
+                <div class="calendar-head"><i>一</i><i>二</i><i>三</i><i>四</i><i>五</i><i>六</i><i>日</i></div>
+                <div class="calendar-grid" aria-hidden="true">
+                  <i></i><i>1<small>3/3</small></i><i class="partial">2<small>2/3</small></i><i>3<small>4/4</small></i><i class="zero">4<small>0/2</small></i><i>5<small>2/2</small></i><i></i>
+                  <i>7<small>3/3</small></i><i>8<small>4/4</small></i><i class="partial">9<small>2/4</small></i><i>10<small>3/3</small></i><i>11<small>2/2</small></i><i></i><i></i>
+                  <i>14<small>4/4</small></i><i class="partial">15<small>3/4</small></i><i>16<small>3/3</small></i><i>17<small>3/3</small></i><i class="zero">18<small>0/2</small></i><i></i><i></i>
+                  <i>21<small>2/2</small></i><i>22<small>3/3</small></i><i class="partial">23<small>2/3</small></i><i>24<small>4/4</small></i><i class="partial">25<small>3/4</small></i><i></i><i></i>
+                </div>
+              </div>
+              <div class="gesture-bar" aria-hidden="true"></div>
+            </div>
+          </div>
+          <div class="stage-caption" aria-live="polite" data-stage-caption>重复事项按需生成，每天独立完成。</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section focus-history-section">
+      <div class="container">
+        <div class="feature-split focus-split">
+          <div class="feature-copy reveal">
+            <span class="feature-index">01 / 专注</span>
+            <h2>先开始<br><em>25 分钟。</em></h2>
+            <p>从任意未完成事项开始一个固定专注时段。暂停、继续、结束都由你决定；自然完成后提醒你休息，但不会替你勾选任务。</p>
+            <ul class="plain-checks"><li>和具体事项关联</li><li>后台持续计时与完成提醒</li><li>不申请精确闹钟权限</li></ul>
+          </div>
+          <div class="focus-art reveal" aria-hidden="true">
+            <div class="focus-art-top"><span>正在专注</span><i></i></div>
+            <p>完成官网初稿</p>
+            <strong>18<span>:</span>42</strong>
+            <div class="focus-track"><i></i></div>
+            <div class="focus-controls"><span>暂停</span><span>结束</span></div>
+            <div class="focus-ripple ripple-one"></div><div class="focus-ripple ripple-two"></div>
+          </div>
+        </div>
+
+        <div class="feature-split history-split">
+          <div class="history-art reveal" aria-hidden="true">
+            <div class="history-card-main">
+              <div class="history-card-head"><span>九月</span><strong>82%</strong></div>
+              <small>本月完成 42 / 51</small>
+              <div class="heatmap">
+                <i></i><i class="full"></i><i class="full"></i><i class="part"></i><i class="full"></i><i></i><i></i>
+                <i class="full"></i><i class="part"></i><i class="full"></i><i class="zero"></i><i class="full"></i><i></i><i></i>
+                <i class="full"></i><i class="full"></i><i class="part"></i><i class="full"></i><i class="part"></i><i></i><i></i>
+                <i class="full"></i><i class="full"></i><i class="part"></i><i class="full"></i><i class="full"></i><i></i><i></i>
+              </div>
+            </div>
+            <div class="day-detail-card"><small>9月24日</small><strong>已完成 4 / 4</strong><span>✓ 整理计划</span><span>✓ 阅读 30 分钟</span></div>
+          </div>
+          <div class="feature-copy reveal">
+            <span class="feature-index">02 / 回看</span>
+            <h2>认真过的每天，<br><em>都算数。</em></h2>
+            <p>月历记录过去日期的完成数、完成率和事项详情。完成、未完成、跳过或删除，回看时都有清楚的上下文。</p>
+            <ul class="plain-checks"><li>月份完成率与记录天数</li><li>只读的每日事项详情</li><li>“无记录”和“0 完成”明确区分</li></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section privacy-section" id="privacy">
+      <div class="privacy-orb" aria-hidden="true"></div>
+      <div class="container privacy-grid">
+        <div class="privacy-copy reveal">
+          <div class="eyebrow eyebrow-light"><span></span>隐私不是开关，是默认值</div>
+          <h2>你的待办，<br>不需要经过<em>任何服务器。</em></h2>
+          <p>应用没有账号系统、后端和主动上传能力，也未申请网络权限。你的日程和想法，默认只留在自己的设备里。</p>
+          <div class="privacy-facts">
+            <div><strong>0</strong><span>注册步骤</span></div>
+            <div><strong>0</strong><span>网络权限</span></div>
+            <div><strong>100%</strong><span>用户掌控</span></div>
+          </div>
+        </div>
+        <div class="data-map reveal" aria-label="数据流向示意图">
+          <div class="data-node data-you">
+            <span class="node-icon">✓</span><span><small>你的事项</small><strong>每日待办</strong></span>
+          </div>
+          <div class="data-line"><span>保存在</span></div>
+          <div class="data-node data-device">
+            <span class="node-icon device-icon">▣</span><span><small>应用私有空间</small><strong>本机数据库</strong></span><i>默认</i>
+          </div>
+          <div class="data-line optional"><span>由你选择备份</span></div>
+          <div class="data-node data-folder">
+            <span class="node-icon folder-icon">▰</span><span><small>系统文件选择器</small><strong>你授权的文件夹</strong></span><i>可选</i>
+          </div>
+          <div class="server-block" aria-hidden="true"><s>☁</s><span>没有应用服务器</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section more-section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div class="eyebrow"><span></span>刚好够用，也认真对待细节</div>
+          <h2>简单，不等于简陋。</h2>
+          <p>需要时，它们都在；不需要时，它们不会挡住今天。</p>
+        </div>
+        <div class="more-grid">
+          <article class="more-card reveal"><span class="more-icon">↻</span><h3>灵活重复</h3><p>每天、工作日、每周单日或自定义星期，还能设置结束日期。</p></article>
+          <article class="more-card reveal"><span class="more-icon">▦</span><h3>自适应 Widget</h3><p>尺寸增加后显示日期和更多事项，小尺寸始终保留标题与进度。</p></article>
+          <article class="more-card reveal"><span class="more-icon">⇅</span><h3>按习惯展示</h3><p>选择是否未完成优先、是否显示已完成事项，并保持稳定顺序。</p></article>
+          <article class="more-card reveal"><span class="more-icon">▣</span><h3>外部备份</h3><p>授权自己的文件夹，修改数据后自动创建可在卸载后保留的快照。</p></article>
+          <article class="more-card reveal"><span class="more-icon">◷</span><h3>日期自动校准</h3><p>日期、系统时间或时区变化后，主页面与小部件会重新刷新今天。</p></article>
+          <article class="more-card reveal"><span class="more-icon">◇</span><h3>原生而轻量</h3><p>使用 Java 与 Android 原生 Views 构建，支持 Android 6.0 及以上版本。</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq-section" id="faq">
+      <div class="container faq-grid">
+        <div class="faq-heading reveal">
+          <div class="eyebrow"><span></span>先把重要的问题说清楚</div>
+          <h2>常见问题</h2>
+          <p>轻量不意味着含糊。关于安装、数据和当前边界，你可以在这里得到直接答案。</p>
+          <a href="https://github.com/zclongwork/zclongwork.github.io/issues" target="_blank" rel="noreferrer">还有问题？前往 GitHub 提问 <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="faq-list reveal">
+          <details open><summary>需要注册账号或保持联网吗？<span></span></summary><p>不需要。应用没有账号或后端，也未申请网络权限。待办默认保存在设备本地。</p></details>
+          <details><summary>卸载应用后，数据还在吗？<span></span></summary><p>应用私有数据会随卸载清除。你可以提前授权一个外部文件夹开启自动备份；备份文件可在卸载后保留，重新安装后再手动选择文件恢复。</p></details>
+          <details><summary>备份文件经过加密吗？<span></span></summary><p>当前没有加密，文件中可能包含待办标题，请只选择可信的位置。应用只访问你通过系统文件选择器授权的目录，不会申请整张存储设备的权限。</p></details>
+          <details><summary>支持提醒、云同步或多人协作吗？<span></span></summary><p>当前不支持按事项时间提醒、云同步和多人协作。25 分钟专注在自然结束时可以发送提醒，但不会自动勾选事项。</p></details>
+          <details><summary>如何安装每日待办？<span></span></summary><p>首个公开版本将优先通过 GitHub 提供。你可以先访问项目仓库查看源码、更新记录和后续发布。</p></details>
+          <details><summary>支持哪些 Android 设备？<span></span></summary><p>应用支持 Android 6.0（API 23）及以上。应用内请求添加桌面小部件需要 Android 8.0 及以上，并取决于当前桌面是否支持。</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="container cta-card reveal">
+        <div class="cta-pattern" aria-hidden="true"></div>
+        <div class="cta-copy">
+          <span class="cta-kicker">每日待办 · Android</span>
+          <h2>让今天的事情，<br>留在今天完成。</h2>
+          <p>无需账号，不用配置复杂系统。看见一件事，完成一件事。</p>
+          <div class="hero-actions">
+            <a class="button button-white" href="#faq">查看发布说明 <span aria-hidden="true">↓</span></a>
+            <a class="button button-outline-light" href="#features">查看完整功能</a>
+          </div>
+        </div>
+        <div class="cta-widget" aria-hidden="true">
+          <div><strong>今日待办</strong><small>已完成 3 / 3</small></div>
+          <span><i></i></span>
+          <p>✓ 今天的事项已全部完成</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <a class="brand footer-brand" href="#top">
+        <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span>每日待办</span>
+      </a>
+      <p>今天要做什么，抬眼就知道。</p>
+      <nav aria-label="页脚导航">
+        <a href="https://github.com/zclongwork/zclongwork.github.io" target="_blank" rel="noreferrer">官网源码</a>
+        <a href="https://github.com/zclongwork/zclongwork.github.io/blob/main/README.md" target="_blank" rel="noreferrer">官网说明</a>
+        <a href="#faq">发布说明</a>
+      </nav>
+    </div>
+    <div class="container footer-bottom">
+      <span>© <span data-year>2026</span> zclongwork</span>
+      <span>为认真生活的每一天而做。</span>
+    </div>
+  </footer>
+
+  <script src="scripts/index.js" defer></script>
 </body>
 </html>
